@@ -1,0 +1,97 @@
+:root {
+	--light-brown: rgb(193, 161, 127);
+	--dark-brown: rgb(121, 103, 74);
+	--brown: rgb(55, 39, 32);
+	--white: rgb(255, 255, 255);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html, body {
+	font-family: 'Roboto', sans-serif;
+	background: var(--dark-brown);
+	color: var(azure);
+	overflow-x: hidden;
+}
+
+.intro p {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 4rem;
+    color: azure;
+    text-align: center;
+}
+
+.candidates {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-content: space-around;
+    align-items: center;
+}
+
+.candidates img {
+    width: 100%;
+}
+
+.each-info {
+    border: 2px solid azure;
+    border-radius: 35% 35% 50% 50% / 15% 15% 13% 13% ;
+    width: 250px;
+    height: 475px;
+    position: relative;
+    color: azure;
+}
+
+.each-info .nomor-jersey {
+    position: absolute;
+    top: 5px;
+    right: 30px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    font-size: 50px;
+}
+
+.each-info hr {
+    height: 5px;
+    border-width: 0;
+    color: azure;
+    background-color: azure;
+    margin: 0;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.5rem;
+}
+
+.info p {
+    margin: 0;
+}
+
+#name {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    font-size: larger;
+    text-align: center;
+}
+
+.input-nisn {
+    width: 30%;
+    margin: 0 auto;
+    margin-top: 1rem;
+}
+
+.input-nisn button {
+    color: azure;
+}
+
+form {
+    display: flex;
+    flex-direction: row ;
+}
