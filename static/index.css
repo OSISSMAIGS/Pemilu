@@ -8,90 +8,165 @@
 * {
 	margin: 0;
 	padding: 0;
+    box-sizing: border-box;
 }
 
-html, body {
-	font-family: 'Roboto', sans-serif;
-	background: var(--dark-brown);
-	color: var(azure);
-	overflow-x: hidden;
+body {
+    font-family: "Lilita One", system-ui;
+    background: var(--white) url("../static/img/B.jpg") no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: black;
+    overflow-x: hidden;
+    width: 100%;
 }
 
-.intro p {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 4rem;
-    color: azure;
+.input-nisn {
+    font-family: 'Komika Axis', sans-serif;
+    font-size: 24px;
+    margin: 0 auto;
+    width: 90%;
+    max-width: 600px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.input-group {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    width: 100%;
+    justify-content: center;
     text-align: center;
+}
+
+.input-group p {
+    font-size: 24px;
+    margin-right: 0.5rem;
+    text-shadow: 
+        -2px -2px 0 white,  
+        2px -2px 0 white,
+        -2px 2px 0 white, 
+        2px 2px 0 white;
+}
+
+form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .candidates {
     display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    align-content: space-around;
+    flex-direction: row;
     align-items: center;
-}
-
-.candidates img {
     width: 100%;
+    gap: 20px;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .each-info {
-    border: 2px solid azure;
-    border-radius: 35% 35% 50% 50% / 15% 15% 13% 13% ;
-    width: 250px;
-    height: 475px;
     position: relative;
-    color: azure;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    width: 100%;
+    max-width: 400px;
+    border: 5px solid #000;
+    border-radius: 15px;
+    overflow: hidden;
 }
 
-.each-info .nomor-jersey {
-    position: absolute;
-    top: 5px;
-    right: 30px;
-    font-family:Georgia, 'Times New Roman', Times, serif;
-    font-weight: bolder;
-    font-size: 50px;
+#first {
+    background-image: url("../static/img/A.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
-.each-info hr {
-    height: 5px;
-    border-width: 0;
-    color: azure;
-    background-color: azure;
-    margin: 0;
+#second {
+    background-image: url("../static/img/R.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#third {
+    background-image: url("../static/img/Y.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.candidate-img {
+    height: 100%;
+    border-radius: 10px;
 }
 
 .info {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    margin-top: 0.5rem;
-}
-
-.info p {
-    margin: 0;
+    align-items: flex-start;
+    text-shadow: 
+        -2px -2px 0 #000,  
+        2px -2px 0 #000,
+        -2px 2px 0 #000, 
+        2px 2px 0 #000;
 }
 
 #name {
-    font-family:Georgia, 'Times New Roman', Times, serif;
-    font-weight: bolder;
-    font-size: larger;
-    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
 }
 
-.input-nisn {
-    width: 30%;
-    margin: 0 auto;
-    margin-top: 1rem;
+.tagline {
+    font-size: 22px;
+    color: white;
+    margin-top: 10px;
 }
 
-.input-nisn button {
-    color: azure;
+/* Responsive for tablet */
+@media (max-width: 768px) {
+    #name {
+        font-size: 22px;
+    }
+    .tagline {
+        font-size: 18px;
+    }
+
+    #second {
+        flex-direction: row-reverse;
+    }
 }
 
-form {
-    display: flex;
-    flex-direction: row ;
+@media (max-width: 480px) {
+    body {
+        justify-content: flex-start;
+    }
+
+    .candidates {
+        margin-left: 1.2rem;
+        width: 90%;
+    }
+
+    .each-info {
+        width: 100%;
+        max-width: 400px;
+        margin-bottom: 20px;
+        height: 150px;
+    }
+
+    #second {
+        flex-direction: row-reverse;
+    }   
 }
