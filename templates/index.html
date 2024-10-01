@@ -12,60 +12,59 @@
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index.css') }}">
     <script src="{{ url_for('static', filename='index.js') }}"></script>
 
-    <title>Pemilu OSIS SMA IGS</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.cdnfonts.com/css/komika-axis" rel="stylesheet">
+
+    <title>PEMILU KETOS OSIS SMA IGS</title>
 </head>
 <body>
-    <section class="intro">
-        <p>PEMILU OSIS SMA IGS</p>
-    </section>
+
+    <div class="input-nisn">
+        <div class="input-group mb-3">
+            <p class="label">NIS : </p>
+            <form id="voteForm" action="/get_cand" method="post">
+                <input type="hidden" name="candidate_number" id="candidate_number">
+                <input type="text" class="form-control" name="nisn" placeholder="Masukkan NISN pemilih" aria-label="NISN" aria-describedby="basic-addon1">
+            </form>
+        </div>
+    </div>
+
+    {% if warning %}
+    <div class="alert alert-warning" role="alert">
+        {{ warning }}
+    </div>
+    {% endif %}
 
     <section class="main">
         <div class="candidates">
             <div class="each-info" data-number="1" id="first">
-				<img src="https://res.cloudinary.com/dhnak6cxo/image/upload/v1715253965/Asteration/About%20Us/Sekretaris/zahira_e275mx.png">
-				<div class="nomor-jersey">1</div>
-				<hr>
+				<img class="candidate-img" src="{{ url_for('static', filename='img/2.png') }}">
 				<div class="info">
-					<p id="name">Zahira Nasywa Rumaisha</p>
-				</div>
+                    <h1 id="name">CELINE AURELIA TAN</h1>
+                    <h2 class="tagline">KANDIDAT 1</h2>
+                </div>
 			</div>
 
             <div class="each-info" data-number="2" id="second">
-				<img src="https://res.cloudinary.com/dhnak6cxo/image/upload/v1715253965/Asteration/About%20Us/Sekretaris/zahira_e275mx.png">
-				<div class="nomor-jersey">2</div>
-				<hr>
-				<div class="info">
-					<p id="name">Zahira Nasywa Rumaisha</p>
-				</div>
+				<img class="candidate-img" src="{{ url_for('static', filename='img/3.png') }}">
+                <div class="info">
+                    <h1 id="name">M. SATRIA ALFAHRI</h1>
+                    <h2 class="tagline">KANDIDAT 2</h2>
+                </div>
 			</div>
 
             <div class="each-info" data-number="3" id="third">
-				<img src="https://res.cloudinary.com/dhnak6cxo/image/upload/v1715253965/Asteration/About%20Us/Sekretaris/zahira_e275mx.png">
-				<div class="nomor-jersey">3</div>
-				<hr>
+				<img class="candidate-img" src="{{ url_for('static', filename='img/1.png') }}">
 				<div class="info">
-					<p id="name">Zahira Nasywa Rumaisha</p>
-				</div>
+                    <h1 id="name">SYAHDAN RAFI ARKAM</h1>
+                    <h2 class="tagline">KANDIDAT 3</h2>
+                </div>
 			</div>
         </div>
-
-        <div class="input-nisn">
-            <div class="input-group mb-3">
-                <span class="input-group-text" id="basic-addon1">NISN : </span>
-                <form id="voteForm" action="/get_cand" method="post">
-                    <input type="hidden" name="candidate_number" id="candidate_number">
-                    <input type="text" class="form-control" name="nisn" placeholder="Masukkan NISN pemilih" aria-label="NISN" aria-describedby="basic-addon1">
-                    <button type="submit">Vote</button>
-                </form>
-            </div>
-        </div>
-
-        {% if warning %}
-        <div class="alert alert-warning" role="alert">
-            {{ warning }}
-        </div>
-        {% endif %}
-
     </section>
 
     <div class="modal fade" id="candidateModal" tabindex="-1" aria-labelledby="candidateModalLabel" aria-hidden="true">
