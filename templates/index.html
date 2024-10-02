@@ -20,15 +20,16 @@
     <link href="https://fonts.cdnfonts.com/css/komika-axis" rel="stylesheet">
 
     <title>PEMILU KETOS OSIS SMA IGS</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/transparent_logo.png') }}" type="image/x-icon">
 </head>
 <body>
-
+    <h1 class="heading">VOTING KETUA OSIS SMA IGS</h1>
     <div class="input-nisn">
         <div class="input-group mb-3">
             <p class="label">NIS : </p>
             <form id="voteForm" action="/get_cand" method="post">
                 <input type="hidden" name="candidate_number" id="candidate_number">
-                <input type="text" class="form-control" name="nisn" placeholder="Masukkan NISN pemilih" aria-label="NISN" aria-describedby="basic-addon1">
+                <input type="text" class="form-control" name="nisn" placeholder="Masukkan NIS pemilih" aria-label="NISN" aria-describedby="basic-addon1">
             </form>
         </div>
     </div>
@@ -46,6 +47,7 @@
 				<div class="info">
                     <h1 id="name">CELINE AURELIA TAN</h1>
                     <h2 class="tagline">KANDIDAT 1</h2>
+                    <a href="{{ url_for('celine') }}" class="redirect">Visi Misi</a>
                 </div>
 			</div>
 
@@ -54,6 +56,7 @@
                 <div class="info">
                     <h1 id="name">M. SATRIA ALFAHRI</h1>
                     <h2 class="tagline">KANDIDAT 2</h2>
+                    <a href="{{ url_for('satria') }}" class="redirect">Visi Misi</a>
                 </div>
 			</div>
 
@@ -62,6 +65,7 @@
 				<div class="info">
                     <h1 id="name">SYAHDAN RAFI ARKAM</h1>
                     <h2 class="tagline">KANDIDAT 3</h2>
+                    <a href="{{ url_for('syahdan') }}" class="redirect">Visi Misi</a>
                 </div>
 			</div>
         </div>

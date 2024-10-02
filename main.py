@@ -36,6 +36,18 @@ def index():
     warning_message = request.args.get('warning', None)
     return render_template("index.html", warning=warning_message)
 
+@app.route("/Celine")
+def celine():
+    return render_template("celine.html")
+
+@app.route("/Satria")
+def satria():
+    return render_template("satria.html")
+
+@app.route("/Syahdan")
+def syahdan():
+    return render_template("syahdan.html")
+
 @app.route("/get_cand", methods=['POST'])
 def get_cand():
     nisn = request.form.get('nisn')
