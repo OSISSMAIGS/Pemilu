@@ -1,0 +1,162 @@
+:root {
+	--light-brown: rgb(193, 161, 127);
+	--dark-brown: rgb(121, 103, 74);
+	--brown: rgb(55, 39, 32);
+	--white: rgb(255, 255, 255);
+    --blue: rgb(2, 149, 249);
+    --red: rgb(255, 34, 34);
+    --yellow: rgb(255, 223, 85);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+    box-sizing: border-box;
+}
+
+body#celine{
+    background-image: url(../static/img/A.jpg);
+    display: block;
+    justify-content: start;
+    align-items: start;
+    overflow-x: hidden;
+    max-width: 100vw;
+}
+
+body#satria{
+    background-image: url(../static/img/R.jpg);
+    display: block;
+    justify-content: start;
+    align-items: start;
+    overflow-x: hidden;
+    max-width: 100vw;
+}
+
+body#syahdan{
+    background-image: url(../static/img/Y.jpg);
+    display: block;
+    justify-content: start;
+    align-items: start;
+    overflow-x: hidden;
+    max-width: 100vw;
+}
+
+section.top{
+    width: 100vw;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    /* background-color: salmon; */
+    margin-top: 2rem;
+}
+
+
+#visi{
+    color: white;
+    text-shadow: 
+    -2px -2px 0 black,  
+    2px -2px 0 black,
+    -2px 2px 0 black, 
+    2px 2px 0 black;
+}
+
+h2.subheading{
+    font-size: 1.5rem;
+    font-family: 'Komika Axis', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-shadow: 
+    -2px -2px 0 white,  
+    2px -2px 0 white,
+    -2px 2px 0 white, 
+    2px 2px 0 white;
+}
+
+div.image{
+    --size: 25rem;
+    width: var(--size);
+    height: var(--size);
+    background-color: var(--blue);
+    border-radius: 50%;
+    border: 0.2rem solid black;
+    background-image: url(../static/img/2.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#no2{
+    background-color: var(--red);
+    background-image: url(../static/img/3.png);
+}
+
+#no3{
+    background-color: var(--yellow);
+    background-image: url(../static/img/1.png);
+}
+
+
+.heading-text{
+    text-align: center;
+}
+
+section.visi-misi{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.visi-content{
+    width: 80vw;
+    background-color: var(--blue);
+    border: 0.3rem solid black;
+    padding: 1rem;
+    border-radius: 0.3rem;
+}
+
+.content-satria{
+    background-color: var(--red);
+}
+.content-syahdan{
+    background-color: var(--yellow);
+}
+
+.visi-content h5{
+    color: black;
+    text-shadow: 
+    -2px -2px 0 white,  
+    2px -2px 0 white,
+    -2px 2px 0 white, 
+    2px 2px 0 white;
+}
+
+.visi-content .inden{
+    margin-left: 2%;
+}
+
+
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    section.top{
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 480px) {
+
+    .visi-content h5{ 
+        /* word-spacing: 5px; */
+        text-align: justify;
+    }
+
+    div.image{
+        --size: 20rem;
+    }
+
+}
